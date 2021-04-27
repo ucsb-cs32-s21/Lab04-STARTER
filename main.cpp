@@ -3,6 +3,7 @@
 #include <fstream>
 #include <vector>
 #include "demogData.h"
+#include "psData.h"
 #include "parse.h"
 #include "dataAQ.h"
 
@@ -16,7 +17,7 @@ int main() {
     std::vector<shared_ptr<demogData>> theDemogData = read_csv(
             "county_demographics.csv", DEMOG);
 
-    std::vector<shared_ptr<policeData>> thePoliceData = read_csvPolice(
+    std::vector<shared_ptr<psData>> thePoliceData = read_csvPolice(
             "police_shootings_cleaned.csv", POLICE);
 
      //debug print out

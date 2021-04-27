@@ -99,7 +99,7 @@ shared_ptr<demogData> readCSVLineDemog(std::string theLine) {
 }
 
 //read one line of police data
-shared_ptr<policeData> readCSVLinePolice(std::string theLine) {
+shared_ptr<psData> readCSVLinePolice(std::string theLine) {
     std::stringstream ss(theLine);
     
     getFieldNQ(ss); //ignore id
@@ -121,7 +121,7 @@ shared_ptr<policeData> readCSVLinePolice(std::string theLine) {
     string state = getFieldNQ(ss);
     //finish reading other data fields and initialize police data
 
-    return make_shared<policeData>(state);
+    return make_shared<psData>(state);
 }
 
 
@@ -164,9 +164,9 @@ std::vector<shared_ptr<demogData>> read_csv(std::string filename, typeFlag fileT
 
 
 // Reads a CSV file 
-std::vector<shared_ptr<policeData>> read_csvPolice(std::string filename, typeFlag fileType) {
+std::vector<shared_ptr<psData>> read_csvPolice(std::string filename, typeFlag fileType) {
     //the actual data
-    std::vector<shared_ptr<policeData> > theData;
+    std::vector<shared_ptr<psData> > theData;
 
     // Create an input filestream
     std::ifstream myFile(filename);

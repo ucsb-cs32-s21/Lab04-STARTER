@@ -6,7 +6,7 @@
 #include <vector>
 #include <map>
 #include "demogState.h"
-#include "policeState.h"
+#include "psState.h"
 
 /*
   data aggregator and query for testing
@@ -18,7 +18,7 @@ class dataAQ {
     /* necessary function to aggregate the data - this CAN and SHOULD vary per
    student - depends on how they map, etc. */
     void createStateDemogData(std::vector<shared_ptr<demogData>> theData);
-    void createStatePoliceData(std::vector<shared_ptr<policeData>> theData);
+    void createStatePoliceData(std::vector<shared_ptr<psData>> theData);
 
     //return the name of the state with the largest population under age 5
     string youngestPop();
@@ -35,9 +35,14 @@ class dataAQ {
 
     string getMinTeenPop();
 
+    //sort and report the top ten states in terms of number of police shootings 
+    void reportTopTenStatesPS();
+    //sort and report the top ten states with largest population below poverty 
+    void reportTopTenStatesBP();
 
+    //getters
     shared_ptr<demogState> getStateData(string stateName) { return nullptr; } //FIX 
-    shared_ptr<policeState> getStatePoliceData(string stateName) { return nullptr; } //FIX  
+    shared_ptr<psState> getStatePoliceData(string stateName) { return nullptr; } //FIX  
     
     friend std::ostream& operator<<(std::ostream &out, const dataAQ &allStateDemogData);
 

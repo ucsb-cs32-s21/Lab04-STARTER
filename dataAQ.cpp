@@ -12,7 +12,7 @@ void createStateDemogData(std::vector<shared_ptr<demogData>> theData) {
 //FILL in
 }
 
-void dataAQ::createStatePoliceData(std::vector<shared_ptr<policeData>> theData) {
+void dataAQ::createStatePoliceData(std::vector<shared_ptr<psData>> theData) {
 //FILL in
 }
 
@@ -51,3 +51,13 @@ string dataAQ::belowPoverty() {
 	//FILL in
   return "fix me"; 
 } 
+
+//sort and report the top ten states in terms of number of police shootings 
+void reportTopTenStatesPS() { 
+//Fill in
+}
+
+//sort and report the top ten states with largest population below poverty 
+void reportTopTenStatesBP(){ 
+//Fill in
+}

@@ -10,7 +10,7 @@ all: ${BINARIES}
 tests: ${BINARIES}
 
 
-dataProj: dataAQ.o demogState.o demogData.o raceDemogData.o policeData.o policeState.o parse.o main.o
+dataProj: dataAQ.o demogState.o demogData.o raceDemogData.o psData.o psState.o parse.o main.o
 	${CXX} $^ -o $@
 
 
